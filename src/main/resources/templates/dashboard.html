@@ -4,6 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
+
+  <style>/* Reset de márgenes y paddings */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  /* Contenedor principal */
+  body {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;    /* Centrado vertical */
+    height: 100%;           /* Ocupa toda la pantalla */
+    background-color: #f9f9f9; /* Fondo claro */
+    font-family: Arial, sans-serif; /* Fuente base */
+  }
+
+  /* Contenedor del dashboard */
+  .dashboard-container {
+    text-align: center;
+    background: #ffffff; /* Fondo blanco */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 400px;
+    width: 100%;
+  }
+
+  /* Estilo del enlace de logout */
+  .logout-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #dc3545; /* Rojo para el logout */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .logout-button:hover {
+    background-color: #c82333;
+  }
+  </style>
 </head>
 <body>
 <h1>Welcome, <span th:text="${user.name}"></span></h1>
